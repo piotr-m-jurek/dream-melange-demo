@@ -7,11 +7,12 @@
     "lib": "lib"
   },
   "dependencies": {
-    "esbuild": "^0.24.2"
+    "esbuild": "^0.24.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
-  "devDependencies": {},
   "scripts": {
-"test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",

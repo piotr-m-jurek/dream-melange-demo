@@ -1,0 +1,5 @@
+(melange.emit
+ (target client)
+ (preprocess
+  (pps melange.ppx reason-react-ppx))
+ (libraries reason-react melange-webapi))

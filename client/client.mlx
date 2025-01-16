@@ -1,0 +1,15 @@
+module App = struct
+  let[@react.component] make () =
+    let text = "Hello ME!" in
+    <div>
+      <h1> (React.string text) </h1>
+    </div>
+end
+
+let () =
+  match ReactDOM.querySelector "#app" with
+  | Some element ->
+    let root = ReactDOM.Client.createRoot element in
+    ReactDOM.Client.render root <App />
+  | None ->
+    Js.Console.error "Failed to start React: couldn't find the #root element"

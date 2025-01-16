@@ -22,13 +22,15 @@
  (synopsis "A short synopsis")
  (description "A longer description")
  (depends
-   (ocaml (>= 4.14))
-   dream
-   html_of_jsx
-   )
+  (ocaml
+   (>= 4.14))
+  dream
+  html_of_jsx
+  melange
+  melange-webapi
+  reason-react)
  (tags
   ("add topics" "to describe" your project)))
-
 
 (dialect
  (name mlx)

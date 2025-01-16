@@ -1,8 +1,10 @@
 let greet ~who () =
   <html>
     <head>
-      <title>"Well"</title>
+      <title>"React + Melange Demo"</title>
       <link rel="stylesheet" href="../static/tiny-brutalism.css"></link>
+      <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+      <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     </head>
     <body>
       <h1>"Good morning, " (JSX.string who) "!"</h1>
@@ -21,10 +23,8 @@ let () =
     [ Dream.get "/" (fun _ ->
       let html = JSX.render <greet who="Me!" /> in
       Dream.html html)
-
     ; Dream.get "/testing" (fun _ ->
       let html = JSX.render <testing /> in
       Dream.html html)
-
-      ;Dream.get "/static/**"  @@ Dream.static "./static"
+    ;Dream.get "/static/**"  @@ Dream.static "./static"
   ]
