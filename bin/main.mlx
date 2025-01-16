@@ -1,0 +1,29 @@
+let greet ~who () =
+  <html>
+    <head>
+      <title>"Well"</title>
+    </head>
+    <body>
+      <h1>"Good morning, " (JSX.string who) "!"</h1>
+      <div id="app"></div>
+      <script src="../static/client.js"></script>
+    </body>
+  </html>
+
+let testing () =
+  <h1>"Well well well, how the turn tables"</h1>
+
+let () =
+  Dream.run
+  @@ Dream.logger
+  @@ Dream.router
+    [ Dream.get "/" (fun _ ->
+      let html = JSX.render <greet who="Me!" /> in
+      Dream.html html)
+
+    ; Dream.get "/testing" (fun _ ->
+      let html = JSX.render <testing /> in
+      Dream.html html)
+
+      ;Dream.get "/static/**"  @@ Dream.static "./static"
+  ]

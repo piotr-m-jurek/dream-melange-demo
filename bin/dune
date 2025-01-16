@@ -1,0 +1,5 @@
+(executable
+ (public_name ocaml_todo)
+ (name main)
+ (libraries ocaml_todo dream html_of_jsx)
+ (preprocess (pps html_of_jsx.ppx)))
