@@ -2,6 +2,7 @@ let greet ~who () =
   <html>
     <head>
       <title>"Well"</title>
+      <link rel="stylesheet" href="../static/tiny-brutalism.css"></link>
     </head>
     <body>
       <h1>"Good morning, " (JSX.string who) "!"</h1>

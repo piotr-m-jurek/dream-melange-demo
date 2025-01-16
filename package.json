@@ -1,0 +1,19 @@
+{
+  "name": "dune-melange-demo",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "esbuild": "^0.24.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+"test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
